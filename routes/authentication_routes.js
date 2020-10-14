@@ -1,5 +1,9 @@
 const express = require("express");
 const router = express.Router();
+const {
+  authorisationRedirect,
+  authorise
+} = require("../middleware/authorisation_middleware");
 
 const {
   registerForm,

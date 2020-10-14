@@ -3,6 +3,7 @@ const home = (req, res) => {
 };
 
 const dashboard = (req, res) => {
-  res.render("dashboard");
+  let { email } = req.session.user.email;
+  res.render("page/dashboard", { email });
 };
 module.exports = { home, dashboard };

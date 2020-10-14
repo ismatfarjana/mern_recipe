@@ -8,7 +8,8 @@ const User = new Schema({
   },
   password: {
     type: String,
-    required: true
+    required: true,
+    bcrypt: true
   }
 });
 User.plugin(require("mongoose-bcrypt"));
